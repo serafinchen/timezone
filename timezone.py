@@ -27,6 +27,7 @@ class Timezone:
     def get_result_timezone(self):
         return str(self.result_timezone)
     
+    
     def change_result_timezone(self, result_timezone):
         self.result_timezone = time.timezone(result_timezone)
 

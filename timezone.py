@@ -9,7 +9,6 @@ class Timezone:
         
         self.current_time = datetime.now()
         self.curren_timezone = self.current_time.astimezone().tzinfo
-        
     
         self.result_time = datetime.now(timezone.utc)
         self.result_timezone = self.result_time.astimezone().tzinfo

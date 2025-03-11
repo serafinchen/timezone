@@ -9,13 +9,17 @@ class Timezone:
         self.result_timezone = pytz.utc
 
     def get_current_time(self):
-        return datetime.now().astimezone()
+        string = str(datetime.now().astimezone())
+        string2 = string[11:19]
+        return string2
     
     def get_current_timezone(self):
         return datetime.now().astimezone().tzinfo
     
     def get_result_time(self):
-        return datetime.now(self.result_timezone)
+        string = str(datetime.now(self.result_timezone))
+        string2 = string[11:19]
+        return string2
     
     def get_result_timezone(self):
         return self.result_timezone

@@ -13,7 +13,7 @@ class MainWindow(PySide6.QtWidgets.QMainWindow):
         layout = PySide6.QtWidgets.QVBoxLayout()
         
         current_time = self.timezone.get_current_time()
-        self.time_lable = PySide6.QtWidgets.QLabel(str(current_time))
+        self.time_lable = PySide6.QtWidgets.QLabel(current_time)
         current_timezone = self.timezone.get_current_timezone()
         self.timezone_lable = PySide6.QtWidgets.QLabel(str(current_timezone))
         
@@ -35,6 +35,8 @@ class MainWindow(PySide6.QtWidgets.QMainWindow):
         self.timer = PySide6.QtCore.QTimer(self)
         self.timer.timeout.connect(self.update_time)
         self.timer.start(1000)
+
+        self.setFixedSize(200,100)
 
     def update_time(self):
         current_time = self.timezone.get_current_time()

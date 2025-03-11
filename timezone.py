@@ -6,29 +6,23 @@ class Timezone:
 
     def __init__(self):
         
-        self.current_time = datetime.now()
-        self.curren_timezone = self.current_time.astimezone().tzinfo
-    
-        self.result_time = datetime.now(pytz.utc)
-        self.result_timezone = self.result_time.tzinfo
-        
+        self.result_timezone = pytz.utc
 
     def get_current_time(self):
-        return self.current_time
+        return datetime.now().astimezone()
     
     def get_current_timezone(self):
-        return self.curren_timezone
+        return datetime.now().astimezone().tzinfo
     
     def get_result_time(self):
-        return self.result_time
+        return datetime.now(self.result_timezone)
     
     def get_result_timezone(self):
         return self.result_timezone
     
     
-    def change_result_timezone(self, result_timezone):
-        self.result_time = datetime.now(pytz.timezone(result_timezone))
-        self.result_timezone = self.result_time.tzinfo
+    def change_result_timezone(self, timezone_name):
+        self.result_timezone = pytz.timezone(timezone_name)
     
 if __name__ == '__main__':
     testTime = Timezone()

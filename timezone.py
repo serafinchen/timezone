@@ -1,5 +1,5 @@
-from pytz import timezone
-from datetime import datetime, timezone
+
+from datetime import datetime
 import pytz
 
 class Timezone:

@@ -19,7 +19,6 @@ class MainWindow(PySide6.QtWidgets.QMainWindow):
 
         mainLayout.addWidget(self.box)
 
-
         self.box.activated.connect(self.change_result_time)
 
         #Current Time and Current Timezone Lable

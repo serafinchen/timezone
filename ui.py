@@ -1,5 +1,6 @@
 import PySide6
 import PySide6.QtCore
+import PySide6.QtGui
 import PySide6.QtWidgets
 from timezone import Timezone
 import pytz
@@ -9,6 +10,7 @@ class MainWindow(PySide6.QtWidgets.QMainWindow):
         super().__init__()
         self.timezone = Timezone()
         self.setWindowTitle("Timezones")
+        self.setWindowIcon(PySide6.QtGui.QIcon("world.jpg"))
         mainLayout = PySide6.QtWidgets.QVBoxLayout()
         current_timeLayout = PySide6.QtWidgets.QHBoxLayout()
         result_timeLayout = PySide6.QtWidgets.QHBoxLayout()

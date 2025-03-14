@@ -7,6 +7,10 @@ class Timezone:
     def __init__(self):
         
         self.result_timezone = pytz.utc
+        self.custom_timezones = ['UTC', 'Pacific/Midway', 'America/Anchorage', 'America/Los_Angeles', 'America/Denver','America/Chicago', 'America/New_York', 'America/Caracas', 'America/Sao_Paulo', 'Atlantic/Azores','Europe/London', 'Europe/Berlin', 'Europe/Moscow', 'Asia/Dubai', 'Asia/Karachi','Asia/Dhaka', 'Asia/Bangkok', 'Asia/Hong_Kong', 'Asia/Tokyo', 'Australia/Sydney','Pacific/Auckland']
+
+    def get_custom_timezones(self):
+        return self.custom_timezones
 
     def get_current_time(self):
         string = str(datetime.now().astimezone())

@@ -25,7 +25,7 @@ class MainWindow(PySide6.QtWidgets.QMainWindow):
 
         #DropDown Box
         self.box = PySide6.QtWidgets.QComboBox()
-        self.box.addItems(pytz.common_timezones)
+        self.box.addItems(self.timezone.get_custom_timezones())
         self.box.setStyleSheet("""
             background-color: white;
             color: #333;
